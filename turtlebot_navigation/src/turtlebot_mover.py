@@ -39,13 +39,14 @@ def wayPointsRviz(waypointsList):
 
     return waypoints
 
+def update_initial_pose(initial_pose):
+        initial_pose = initial_pose
 
 def sendGoals(waypoints):
     # With msg type PoseWithCovarianceStamped. 
     initial_pose = PoseWithCovarianceStamped()
 
-    def update_initial_pose(initial_pose):
-        initial_pose = initial_pose
+    
 
     # set initial pose of the robot 
     initial_pose = PoseWithCovarianceStamped()
@@ -87,6 +88,10 @@ def sendGoals(waypoints):
 
 
 ss = CustomWayPoints()
-
+# gives back loactions
+print("print test")
+print(len(ss))
+print(wayPointsRviz(ss))
 send = sendGoals(ss)
-#print(wayPointsRviz(ss))
+
+print(wayPointsRviz(ss))
